@@ -1,0 +1,8 @@
+php artisan make:seeder LevelSeeder
+php artisan make:factory LevelFactory
+php artisan db:seed --class=LevelSeeder
+
+>has(Exam::factory()->has(Question::factory()->count(60),
+        )->count(2)
+        )->count(2)
+        )->count(3)->create()
